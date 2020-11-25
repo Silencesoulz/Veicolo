@@ -1,177 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Veicolo profile</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body{
-    background:rgba(255, 247, 210, 0.89);
-  }
-  .container{
-    position: absolute;
-    max-width: 800px;
-    height: 500px;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  .myRight{
-    position: relative;
-    background-image:linear-gradient(45deg,rgb(150, 143, 255),rgb(126, 97, 255));
-    border-radius: 25px;
-    height: auto;
-    padding: 25px;
-    color: white;
-    font-size:12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .myLeft{
-    position: relative;
-    background-color: rgb(255, 167, 36);
-    border-radius: 25px;
-    height: auto;
-    padding: 25px;
-    padding-left: 50px;
-  }
-  .myLeft header {
-    color: rgb(99, 64, 255);
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  .row{
-    height: 100%;
-  }
-  .myCard{
-    position: relative;
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+  <style>
 
-    height: 100%;
-    border-radius: 25px;
-  }
-  .myRight header{
-    color: rgb(255, 255, 255);
-    font-size: 44px;
-  }
-  .myRight .butt{
-    background: linear-gradient(rgb(255, 131, 82),rgb(255, 118, 26));
-    color: rgb(255, 255, 255);
-    width: 230px;
-    border: none;
-    font-size: 15px;
-    border-radius: 25px;
-    padding: 10px;
-  }
-  .myRight .butt:hover{
-    background: linear-gradient(rgb(255, 199, 114),rgb(245, 135, 45));
-  }
+    body{
+      background-color: wheat;
+      font-family: 'Poppins', sans-serif;
+    }
+    .myInfo{
+      position: relative;
+      margin-top: 70px;
+  background-image:linear-gradient(45deg,rgb(255, 224, 88),rgb(252, 162, 28));
+  border-radius: 25px;
+  height: auto;
+  padding: 25px;
+  color: white;
+  font-size:12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    }
+
   .box{
     position: relative;
-    margin: 20px;
-    margin-bottom:100px;
+    justify-content: center;
+  align-items: center;
+  
   }
-  .myLeft .myInput{
-    width:230px;
-    border-radius: 25px;
-    padding: 10px;
-    padding-left: 50px;
-    border: none;
-    background: wheat;
-
+  .formaline .form-group{
+    width:100%;padding: 10px;border: 1px solid rgb(255, 255, 255);color: black;
   }
-  .myLeft .myInput:focus{
-    outline: none;
-  }
-  .myForm{
-    position: relative;
-    margin-top: 50px;
-  }
-  .myLeft .RegisLeft{
-    background: linear-gradient(rgb(82, 82, 255),rgb(106, 26, 255));
-    color: rgb(214, 214, 214);
-    width: 280px;
-    border: none;
-    border-radius: 25px;
-    padding: 10px;
-
-  }
-  .myLeft .RegisLeft:hover{
-    background: linear-gradient(rgb(114, 123, 255),rgb(45, 125, 245));
-  }
-  .myLeft .fas{
-    position: relative;
-    color: rgb(60, 104, 247);
-
-  }
-  .myForm .prov{
-  background-color: wheat;
-
-  font-size: 13px;
-  width: 230px;
-    border: none;
-    border-radius: 25px;
-    padding: 10px;
-
-  }
-  .img img{
-    height: 200px;
-    margin: 15px;
-  }
-    </style>
-
-<div class="container forget-password">
-
-  <div class="container">
-    <div class="myCard">
-      <div class="row ">
-        <div class="col-md-6">
-          <div class="myLeft">
-                                <img style="height:120px ; width:120px; margin-bottom: 20px; margin-left: 84px;"src="https://img.icons8.com/cotton/2x/edit.png" class = "center">
-                                <h3 class="text-center">Edit your profile</h3>
-                                &nbsp;
-                                <form class ="" action="/edit/<%=user._id%>" method="post">
-  <div class="form-group">
-      <label for="">Name</label>
-      <input type="text" name="name" value="<%=user.name%>" class="form-control">
-  </div>
-
-  <div>
-    <label for="">Email</label>
-    <input type="text" name="email" value="<%=user.email%>" class="form-control" required disabled title="Email cannot be edited">
-  </div>
-  &nbsp;
-  <div>
-      <label for="">Telephone</label>
-      <input type="text" name="telephone" value="<%=user.telephone%>" class="form-control">
-  </div>
-  &nbsp;
-  <div>
-      <label for="">Car plate</label>
-      <input type="text" name="firstnum" value="<%=user.firstnum%>" class="form-control" required disabled title="Car plate cannot be edited">
-  </div>
-  &nbsp;
-  <div>
-  <label for="">Line</label>
-  <input type="text" name="line" value="<%=user.line%>" class="form-control">
-</div>
-  &nbsp;
-  <div>
-      <input type ="submit" name="" value="Submit" class = "RegisLeft">
-  </div>
-</form>
+  </style>
+  </head>
+  <body>
+  <div class="d-flex justify-content-center">
 
 
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="col-md-6">
+      <div class="myInfo">
+        <div class="box">
+          <img style="width: 200px; margin-bottom: 50px;"src="/public/me.svg">
+          <header align="center" style="color: rgb(0, 0, 0); font-size: 20px;">Edit your profile</header><br>
+          <form class="formaline" action="/edit/<%=user._id%>" method="post">
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" name="name" value="<%=user.name%>" class="form-control">
             </div>
+          
+            <div class="form-group">
+              <label for="">Email</label>
+              <input type="text" name="email" value="<%=user.email%>" class="form-control" required disabled title="Email cannot be edited">
+            </div>
+            &nbsp;
+            <div class="form-group">
+                <label for="">Telephone</label>
+                <input type="text" name="telephone" value="<%=user.telephone%>" class="form-control">
+            </div>
+            &nbsp;
+            <div class="form-group">
+                <label for="">Car plate</label>
+                <input type="text" name="firstnum" value="<%=user.firstnum%>" class="form-control" required disabled title="Car plate cannot be edited">
+            </div>
+            &nbsp;
+            <div class="form-group">
+            <label for="">Line</label>
+            <input type="text" name="line" value="<%=user.line%>" class="form-control">
+          </div>
+            &nbsp;
+            <div>
+                <input style=" background: linear-gradient(rgb(255, 131, 82),rgb(255, 118, 26));
+                color: rgb(255, 255, 255);
+                width: 230px;
+                border: none;
+                font-size: 15px;
+                border-radius: 25px;
+                padding: 10px;" type ="submit" name="" value="Submit" class = "RegisLeft">
+            </div>
+          </form>
+          
+   
+          <br>
+          
         </div>
+      </div>
+    </div>
+
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
