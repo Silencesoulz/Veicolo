@@ -44,19 +44,31 @@
       <div class="myInfo">
         <div class="box">
           <img style="width: 200px; margin-bottom: 50px;"src="/public/me.svg">
-          <header align="center" style="color: rgb(0, 0, 0); font-size: 20px;">Show information</header><br>
+          <header align="center" style="color: rgb(0, 0, 0); font-size: 20px;">Searching result</header><br>
           <p style="width:100%;padding: 10px;border: 1px solid rgb(255, 255, 255);color: black;">Name : <%=carfind.name%><br></p>
           <p style="width:100%;padding: 10px;border: 1px solid rgb(255, 255, 255);color: black;">TEL : <%=carfind.telephone%><br></p>
           <p style="width:100%;padding: 10px;border: 1px solid rgb(255, 255, 255);color: black;">Line : <%=carfind.line%><br></p>
           <br>
           <a href="/search">
+            <button style=" background: linear-gradient(rgb(36, 212, 109),rgb(36, 226, 163));
+            color: rgb(255, 255, 255);
+            width: 100%;
+            border: none;
+            font-size: 18px;
+            border-radius: 30px;
+            padding: 10px;
+            justify-content: center;">Search again</button></a>
+          <br>
+          <br>
+          <a href="/dashboard">
             <button style=" background: linear-gradient(rgb(255, 131, 82),rgb(255, 118, 26));
             color: rgb(255, 255, 255);
-            width: 230px;
+            width: 100%;
             border: none;
             font-size: 15px;
             border-radius: 25px;
-            padding: 10px;">Back to Search</button></a>
+            padding: 7px;
+            justify-content: center;">Back to Profile</button></a>
         </div>
       </div>
     </div>
