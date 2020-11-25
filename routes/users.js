@@ -52,7 +52,6 @@ router.post('/register', (req, res) => {
       province,
       line
 
-
     });
   } else {
     User.findOne({ email: email }).then(user => {
@@ -69,9 +68,28 @@ router.post('/register', (req, res) => {
           firstnum,
           province,
           line
-
-
+        
         });
+
+  } else {
+    User.findOne({ firstnum: firstnum }).then(user => {
+      if (user) {
+        errors.push({ msg: 'Car plate already exists '});
+        res.render('register', {
+          errors,
+          name,
+          email,
+          password,
+          password2,
+          telephone,
+          line,
+          firstnum,
+          province,
+          line
+    
+          });
+        
+    
       } else {
         const newUser = new User({
           name,
@@ -103,6 +121,8 @@ router.post('/register', (req, res) => {
     });
   }
 });
+}
+});
 // Login Page
 router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 // Login
@@ -128,4 +148,3 @@ router.get('/:firstnum',carController.find);
 
 
 module.exports = router;
-
