@@ -59,4 +59,12 @@ router.get('/error', function(req, res, next){
   });
 });
 
+router.get('/search', function(req, res, next){
+  User.findById(req.params.id, function(err, user){
+    res.render('search',{
+      user:user
+    });
+  });
+});
+
 module.exports = router;

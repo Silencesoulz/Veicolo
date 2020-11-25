@@ -52,22 +52,7 @@
           <p style="width:100%;padding: 10px;border: 1px solid rgb(255, 255, 255);color: black;">Line : <%=user.line%><br></p>
 
           <p align="center"><a href='/edit/<%=user._id%>' class="btn btn-primary btn-block" style="background-color: chocolate;">Edit your profile</a></p>
-          <br>
-          <p align="center" style="color: rgb(0, 0, 0); font-size: 20px;" >Find car plate</p>
-          <form action="/users/:firstnum" method="GET">
-            <div class="form-group">
-              <input
-                type="text"
-                name="firstnum"
-                class="form-control"
-                placeholder="Enter plate number"
-                required
-              />
-            </div>
-
-            <button type="submit" style="background-color: green; border: none;" class="btn btn-primary btn-block" id='getdata' onclick="GetData()">Search</button>
-          </form>
-
+          <p align="center"><a href="/search" class="btn btn-primary btn-block" style="background-color: chocolate;">Search</a></p>
           <br>
 
           <p align="center"><a href="/users/logout" class="btn btn-secondary" style="background-color: rgb(128, 59, 255);">logout</a></p>

@@ -43,20 +43,29 @@
     <div class="col-md-6">
       <div class="myInfo">
         <div class="box">
-          <img style="width: 200px; margin-bottom: 50px;"src="/public/me.svg">
-          <header align="center" style="color: rgb(0, 0, 0); font-size: 20px;">Show information</header><br>
-          <p style="width:100%;padding: 10px;border: 1px solid rgb(255, 255, 255);color: black;">Name : <%=carfind.name%><br></p>
-          <p style="width:100%;padding: 10px;border: 1px solid rgb(255, 255, 255);color: black;">TEL : <%=carfind.telephone%><br></p>
-          <p style="width:100%;padding: 10px;border: 1px solid rgb(255, 255, 255);color: black;">Line : <%=carfind.line%><br></p>
+            <p align="center" style="color: rgb(0, 0, 0); font-size: 20px;" >Find car plate</p>
+            <form action="/users/:firstnum" method="GET">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="firstnum"
+                  class="form-control"
+                  placeholder="Enter plate number"
+                  required
+                />
+              </div>
+              <button type="submit" style="background-color: green; border: none;" class="btn btn-primary btn-block" id='getdata' onclick="GetData()">Search</button>
+            </form>
           <br>
-          <a href="/search">
+          <a href="/dashboard">
             <button style=" background: linear-gradient(rgb(255, 131, 82),rgb(255, 118, 26));
             color: rgb(255, 255, 255);
             width: 230px;
             border: none;
             font-size: 15px;
             border-radius: 25px;
-            padding: 10px;">Back to Search</button></a>
+            padding: 10px;
+            align-items: center;">Back to Profile</button></a>
         </div>
       </div>
     </div>
