@@ -44,7 +44,19 @@ router.post('/edit/:id', function(req, res){
 });
 
 router.get('/data', function(req, res, next){
-  res.render("data",{data: carfind});
-})
+  User.findById(req.params.id, function(err, user){
+    res.render('data',{
+      user:user
+    });
+  });
+});
+
+router.get('/error', function(req, res, next){
+  User.findById(req.params.id, function(err, user){
+    res.render('error',{
+      user:user
+    });
+  });
+});
 
 module.exports = router;

@@ -6,14 +6,14 @@ try {
     if(!carfind){
         throw new Error('ไม่พบทะเบียนนี้ในระบบ');
     }
-    res.status(200).json({
-        data:carfind
-    });
-} catch (error) {
-    res.status(400).json({
-        error:{
-            message: 'เกิดข้อผิดพลาดขึ้น '+ error.message
-    }
-    });
+    // res.status(200).json({
+    //     data: carfind      
+    // });
+    res.status(200).render('data',{
+        carfind:carfind
+      });
+    } catch (error) {
+    res.status(400).render('error',{
+      });
 }
 }
